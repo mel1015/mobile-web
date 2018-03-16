@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+<% include ../partials/nav %>
+
+<div class="container-fluid">
+    <div class="container user user-new">
+
+        <div class="container" id="review_title">
+            <span>WELCOME</span>
+        </div>
+
+        <form class="user-form form-horizontal" action="/users" method="post">
+            <div class="contentBox">
+                <h3 class="contentBoxTop">회원가입</h3>
+
+                <fieldset>
+                    <div class="form-group <%= (errors.userid) ? 'has-error' : '' %>">
+                        <label for="username" class="col-sm-3 control-label">ID*</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text" id="userid" name="userid"
+                                   value="<%= user.userid %>">
+                            <% if(errors.userid){ %>
+                            <span class="help-block"><%= errors.userid.message %></span>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="form-group <%= (errors.name) ? 'has-error' : '' %>">
+                        <label for="name" class="col-sm-3 control-label">이름*</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text" id="name" name="name" value="<%= user.name %>">
+                            <% if(errors.name){ %>
+                            <span class="help-block"><%= errors.name.message %></span>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="form-group <%= (errors.email) ? 'has-error' : '' %>">
+                        <label for="email" class="col-sm-3 control-label">이메일</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="text" id="email" name="email" value="<%= user.email %>">
+                            <% if(errors.email){ %>
+                            <span class="help-block"><%= errors.email.message %></span>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="form-group <%= (errors.password) ? 'has-error' : '' %>">
+                        <label for="password" class="col-sm-3 control-label">비밀번호*</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="password" id="password" name="password" value="">
+                            <% if(errors.password){ %>
+                            <span class="help-block"><%= errors.password.message %></span>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="form-group <%= (errors.passwordConfirmation) ? 'has-error' : '' %>">
+                        <label for="passwordConfirmation" class="col-sm-3 control-label">비밀번호 확인*</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="password" id="passwordConfirmation"
+                                   name="passwordConfirmation" value="">
+                            <% if(errors.passwordConfirmation){ %>
+                            <span class="help-block"><%= errors.passwordConfirmation.message %></span>
+                            <% } %>
+                        </div>
+                    </div>
+                    <p>
+                        <small>*필수기입</small>
+                    </p>
+                </fieldset>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="btn btn-success">회원가입</button>
+            </div>
+            <% if(errors.unhandled){ %>
+            <div class="alert alert-danger">
+                <%= errors.unhandled %>
+            </div>
+            <% } %>
+        </form>
+    </div> <!-- container end -->
+    <% include ../partials/footer %>
+</div>
+
+</body>
+</html>

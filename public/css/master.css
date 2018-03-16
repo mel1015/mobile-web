@@ -1,0 +1,512 @@
+/* global style */
+@import url('//fonts.googleapis.com/earlyaccess/hanna.css');
+@import url('//fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Jeju Gothic';
+
+}
+
+input[type="password"] {
+    font-family: Arial;
+}
+
+@media (max-width: 300px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 110%;
+    }
+}
+
+.navbar-brand {
+    padding-left: 20px;
+}
+
+.navbar-brand > img {
+    height: auto;
+    width: 100px;
+}
+
+form .form-control {
+    font-size: inherit;
+    line-height: 25px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+form fieldset {
+    margin: 7px 0 1px;
+    padding: 0px 15px;
+}
+
+form .form-group {
+    margin: 0;
+    padding-bottom: 6px;
+}
+
+.ellipsis {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-horizontal .control-label {
+    padding-top: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.contentBox {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.contentBoxTop {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    background-color: #F5F5F5;
+    padding: 6px 15px;
+}
+
+/* home style */
+.home h1 {
+    color: darkseagreen;
+}
+
+.home-login {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Jeju Gothic';
+    font-size: 12px;
+}
+
+/*메인 타이틀*/
+.en {
+    font-family: 'Hanna';
+    font-size: 3rem;
+}
+
+.title_text {
+    margin-top: 150px;
+    font-size: 34px;
+    color: #444;
+    text-align: center;
+    font-weight: 300;
+    line-height: 55px;
+    position: relative;
+    top: 30px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.title_text span {
+    font-weight: 500;
+}
+
+.title_text.active {
+    top: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.title_animation {
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.title_serach {
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 20px;
+    color: #f68c5e;
+    position: relative;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.title_serach.active {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+/*장소 추천 부분*/
+.section_service {
+    position: relative;
+    background: #fff;
+    padding-top: 100px;
+}
+
+.section_service .list_area {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.section_service .list_area .title_area {
+    height: 30px;
+    position: relative;
+    text-align: center;
+}
+
+/*장소 추천 왼쪽 수평선*/
+.section_service .list_area .title_area:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #b2b2b2;
+    position: absolute;
+    right: 50%;
+    top: 15px;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+/*장소 추천 오른쪽 수평선*/
+.section_service .list_area .title_area:before {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #b2b2b2;
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+/*장소 추천 왼쪽 수평선*/
+.section_service .list_area .title_area.active:after {
+    width: 50%;
+}
+
+/*장소 추천 오른쪽 수평선*/
+.section_service .list_area .title_area.active:before {
+    width: 50%;
+}
+
+/*장소 추천 타이틀 박스*/
+.section_service .list_area .title_area .title_box {
+    padding: 0 70px;
+    background: #fff;
+    font-size: 20px;
+    color: #222;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    top: 34px;
+}
+
+.section_service .list_area .title_area .title_box.active {
+    top: 0;
+}
+
+.section_service .list_area .title_area .title_box span {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/*장소 추천*/
+.section_service .list {
+    margin-top: 30px;
+}
+
+.thumbnail .caption {
+    text-align: center;
+}
+
+/*푸터*/
+#footer {
+    border-top: 1px solid lightgray;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer_logo {
+    display: inline-block;
+    float: left;
+}
+
+#footer_img {
+    height: auto;
+    width: 150px;
+}
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+/*
+    Multicoloured Hover Variations
+*/
+
+#social-fb:hover {
+    color: #3B5998;
+}
+
+#social-tw:hover {
+    color: #4099FF;
+}
+
+#social-gp:hover {
+    color: #d34836;
+}
+
+#social-em:hover {
+    color: #f39c12;
+}
+
+/*장소 검색*/
+.place {
+    margin-bottom: 60px;
+}
+
+/* post style */
+#review_title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    float: right;
+    padding: 10px 10px 10px 10px;
+}
+
+#btn-delete {
+    display: inline-block;
+}
+
+.post .post-body {
+    white-space: pre-line;
+    padding: 6px 15px 20px;
+}
+
+.post .post-info {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #E4E4E4;
+    border: 0 solid black;
+    border-radius: 5px;
+}
+
+.post .post-info > div {
+    padding: 5px 0;
+    border-top: 1px dotted #999;
+}
+
+.post .post-info > div:first-child {
+    border-top: none;
+}
+
+.post .post-info span {
+    display: inline-block;
+    width: auto;
+}
+
+.post-index .posts {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    table-layout: fixed;
+}
+
+.post .posts th,
+.post .posts td {
+    padding: 7px 5px;
+}
+
+.post .posts th:first-child,
+.post .posts td:first-child {
+    padding-left: 15px;
+}
+
+.post .posts thead {
+    background-color: #F5F5F5;
+}
+
+.post .posts thead tr th {
+    border-bottom: 1px solid #ccc;
+}
+
+.post .posts tbody tr:nth-child(odd) {
+    background-color: #F4FFFF;
+}
+
+.post .posts tbody .noData {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.post .posts .author {
+    text-align: center;
+    width: 150px;
+}
+
+.post .posts .date {
+    text-align: center;
+    width: 200px;
+    padding-right: 15px;
+}
+
+.post-index {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post-new {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post-edit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* user style */
+.user {
+    font-family: 'Jeju Gothic';
+    font-size: 12px;
+}
+
+.user-show {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-index ul {
+    margin: 0;
+    padding: 3px 12px;
+}
+
+.user-index ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.user-index ul li {
+    display: inline-block;
+    list-style-type: none;
+    float: left;
+}
+
+.user-index ul li a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 3px;
+    background-color: #eee;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.user-index ul li a:hover {
+    background-color: #ccc;
+}
+
+.user-new {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-edit hr {
+    margin-top: 5px;
+    margin-bottom: 11px;
+}
+
+/*place style*/
+#map_canvas {
+    float: left;
+    width: 100%;
+    height: 450px;
+}
+
+#search_result {
+    border-top: solid 1px lightgray;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+#listing {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+#listing > span {
+    font-size: 2rem;
+}
+
+#controls {
+    padding: 5px;
+}
+
+.placeIcon {
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+}
+
+#results {
+    border-collapse: collapse;
+    width: 100%;
+}

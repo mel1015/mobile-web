@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+<% include ../partials/nav %>
+
+<!-- 후기 게시판-->
+<div class="container-fluid">
+    <div class="container post post-index">
+
+        <div class="container" id="review_title">
+            <span>후기</span>
+        </div>
+
+        <table class="table table-striped posts">
+            <thead>
+            <tr>
+                <th class="title">제목</th>
+                <th class="author">글쓴이</th>
+                <th class="date">날짜</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% if(posts == null || posts.length == 0){ %>
+            <tr>
+                <td class="noData" colspan=100> 등록된 후기가 없습니다. :(</td>
+            </tr>
+            <% } %>
+            <% posts.forEach(function(post) { %>
+            <tr>
+                <td class="title">
+                    <a href="/posts/<%= post._id %>">
+                        <div class="ellipsis"><%= post.title %></div>
+                    </a>
+                </td>
+                <td class="author">
+                    <div class="ellipsis"><%= post.author ? post.author.userid : "" %></div>
+                </td>
+                <td class="date">
+                    <%= post.createdDate %>
+                </td>
+            </tr>
+            <% }) %>
+            </tbody>
+        </table>
+
+        <div class="buttons">
+            <% if(isAuthenticated){ %>
+            <a class="btn-lg btn-primary" href="/posts/new">글쓰기</a>
+            <% } %>
+        </div>
+    </div>
+    <% include ../partials/footer %>
+</div>
+<!-- /후기 게시판-->
+
+</body>
+</html>

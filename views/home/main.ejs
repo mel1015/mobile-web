@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--partial view로 head 삽입-->
+    <% include ../partials/head %>
+</head>
+<body>
+<!--partial view로 네비게이션 삽입-->
+<% include ../partials/nav %>
+
+<!--화면-->
+<div class="container-fluid">
+
+    <!--메인 컨테이너-->
+    <div class="container home home-welcome">
+        <!--타이틀-->
+        <div class="section_top">
+            <div class="title_text title_animation active">
+                사랑하는 반려동물과 좋은 추억을 만들 장소<br>
+                <span class="en">WITH댕댕냥냥</span>에서 검색해보세요.
+
+            </div><!--//텍스트-->
+            <div class="title_serach title_animation active"><!--검색창-->
+                <input type="text" class="form-control input-lg" placeholder="위치 입력">
+                <br>
+                <a class="btn-lg btn-primary" href="/places">검색</a>
+            </div><!--/검색창-->
+        </div>
+        <!--/타이틀-->
+
+        <!--서비스부분-->
+        <div class="section_service">
+            <div class="list_area">
+                <div class="title_area active">
+                    <div class="title_box active">
+                        <span>장소 추천</span>
+                    </div>
+                </div>
+                <div class="row list">
+                    <div class="col-xs-4">
+                        <div class="thumbnail">
+                            <img src="/img/financial_bg1.jpg" alt="놀이터">
+                            <div class="caption">
+                                <h3>공원 & 놀이터</h3>
+                                <p>공원과 놀이터에서 강아지들이 <br>
+                                    즐겁게 뛰노는걸 보세요!!</p>
+                                <p><a href="#"
+                                      class="btn btn-primary"
+                                      role="button">자세히</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="thumbnail">
+                            <img src="/img/financial_bg1.jpg" alt="놀이터">
+                            <div class="caption">
+                                <h3>음식점</h3>
+                                <p>반려동물과 동반입장 가능한 음식점에서<br>
+                                    편안한 식사를 하세요.</p>
+                                <p><a href="#"
+                                      class="btn btn-primary"
+                                      role="button">자세히</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="thumbnail">
+                            <img src="/img/financial_bg1.jpg" alt="놀이터">
+                            <div class="caption">
+                                <h3>호텔</h3>
+                                <p>반려동물과 동반입장 가능한<br>
+                                    호텔에서 휴가를 즐기세요</p>
+                                <p><a href="#"
+                                      class="btn btn-primary"
+                                      role="button">자세히</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/list_area-->
+        </div>
+        <!--/서비스 부분-->
+    </div>
+    <!--/메인 컨테이너-->
+
+    <!--푸터-->
+    <% include ../partials/footer %>
+</div>
+<!--화면-->
+</body>
+</html>
